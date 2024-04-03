@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Managment</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+<body>
+  
+<div class="header ">
+  <div class="logo"><img src="img/12.jpeg" alt="" srcset=""></div>
+  <h2>Electronic Medical Record</h2>
+</div>
+<div class="contaner_patient_add" id="contaner_patient_add">
+<div class="add_patient">
+  <div class="add_patient_icon">
+ <h2 class="patient">Add Patient </h2>
+ <i class="fa-solid fa-plus"></i></div>
+<div class="patient_data">
+<input type="text" name="" id="name" placeholder="Patient Name"  required>
+<input type="number" name="" id="MRN" placeholder="MRN" required>
+<input type="text" name="" id="address" placeholder="Address" required>
+<input type="number" name="" id="phone" placeholder="Phone" required>
+<input type="text" name="" id="Diagnosis" placeholder="Medical Diagnosis" required>
+</div>
+</div>
+
+<!-- skin================================= -->
+<div class="skin" style="padding: 10px;">
+  <div class="skin_icon">
+    <h2 class="patient">Make Skin Assessment</h2>
+    <i class="fa-solid fa-hand-dots" onclick="show_skin()"></i></div>
+  <div class="skin_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>family</td>
+           <td>subfamily</td>
+          
+           <td>comments</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td><h2>limbs:</h2></td>
+
+           <td><div class="row"><h3>hotness:</h3> <select name="" id="hotness"> <option value="no">no</option> <option value="yes">yes</option></select></div>
+            <div class="row"><h3>redness:</h3><select name="" id="redness">  <option value="no">no</option><option value="yes">yes</option></select> </div>
+            <div class="row"><h3>oedema:</h3><select name="" id="oedema">  <option value="no">no</option><option value="yes">yes</option></select> </div>
+            <div class="row"><h3>lax........:</h3><select name="" id="lax"> <option value="no">no</option> <option value="yes">yes</option></select></div>
+            <div class="row"><h3>regidity:</h3><select name="" id="regidity">  <option value="no">no</option><option value="yes">yes</option></select></div>
+            
+          </td>
+          <td><input type="text" name="" id="limbs" placeholder="limbs comments"></td>
+         </tr>
+         <tr>
+           <td><h2>Burns:</h2></td>
+           <td> 
+  
+           
+            <div class="row"><h3>if burn (write on comment):</h3>
+          </td>
+          <td><input type="text" name="" id="burn" placeholder="burn_comments"></td>
+         </tr>
+         <tr>
+          <td><h2>bed sors:</h2></td>
+          <td><div class="row"><h3>if bedsors (write on comment)</h3> </div> </td>
+        <td><input type="text" name="" id="bedsors" placeholder="bedsors_comments"> </td> </tr>
+       </tbody>
+      </table>
+       </div>
+       
+        <!-- row============================= -->
+  </div>
+</div>
+
+
+
+
+
+<!-- ااتاريخ المرضي=============================== -->
+<div class="history" style="padding: 10px;">
+  <div class="history_icon">
+    <h2 class="patient">History</h2>
+    <i class="fa-solid fa-file-medical" onclick="show_history()"></i></div>
+  <div class="history_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>family</td>
+           <td>subfamily</td>
+          
+           <td>comments</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+        <h2>History:</h2>
+      </td>
+      <td><div class="row">DVT?  <select name="" id="DVT"> <option value="no">no</option> <option value="yes">yes</option></select> </td>
+   <td></td>     
+    </tr>
+
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Previous Operation? <select name="" id="Operation"> <option value="no">no</option> <option value="yes">yes</option></select> </div> </td>
+   <td> <input type="text" name="" id="Operation_comment" placeholder="Operation_comment"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Previous Hospitalization? <select name="" id="Hospitalization"> <option value="no">no</option> <option value="yes">yes</option></select>  </div> </td>
+   <td> <input type="text" name="" id="Hospitalization_comment" placeholder="Hospitalization_comment"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">any medical disease?<select name="" id="disease"> <option value="no">no</option> <option value="yes">yes</option></select></div> </td>
+   <td> <input type="text" name="" id="medical_comment" placeholder="medical_comment"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Previous Allergy?<select name="" id="Allergy1"> <option value="no">no</option> <option value="yes">yes</option></select> </div> </td>
+   <td> <input type="text" name="" id="Allergy_comment" placeholder="Allergy_comment"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">No problems  <select name="" id="No_problems"> <option value="no">no</option> <option value="yes">yes</option></select> </div> </div> </td>
+   <td> </td>     
+    </tr>
+
+
+         </tbody>
+      </table>
+       </div>
+       
+        <!-- row============================= -->
+  </div>
+
+
+<!-- primary assessment============= -->
+<div class="primary_assessment" style="padding: 10px;">
+  <div class="primary_assessment_icon">
+    <h2 class="patient">Primary Assessment</h2>
+    <i class="fa-solid fa-stethoscope" onclick="show_assement()"></i></div>
+  <div class="primary_assessment_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>family</td>
+           <td>subfamily</td>
+          
+           <td>Comments</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+        <h3>Primary Assessment:</h3>
+      </td>
+      <td><div class="row">Airway: </td>
+   <td> <input type="text" name="" id="Airway" placeholder="Airway"></td>     
+    </tr>
+
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Breathing:</div> </td>
+   <td> <input type="text" name="" id="Breathing" placeholder="Breathing"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Circulation:</td>
+   <td> <input type="text" name="" id="Circulation" placeholder="Circulation"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Disability: </td>
+   <td> <input type="text" name="" id="Disability" placeholder="Disability"></td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Exposure :</td>
+   <td> <input type="text" name="" id="Allergy_comment" placeholder="Allergy_comment"></td>     
+    </tr>
+    <tr>
+      <td>
+        <h3>Secondary Assessment:</h3>
+      </td>
+      <td><div class="row">Pulmonary:</td>
+   <td> <input type="text" name="" id="Pulmonary" placeholder="Pulmonary"></td>     
+  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Cardiovascular:</td>
+   <td> <input type="text" name="" id="Cardiovascular" placeholder="Cardiovascular"></td>     
+  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Neuro:</td>
+   <td> <input type="text" name="" id="Neuro" placeholder="Neuro"></td>     
+  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">Endocrine:</td>
+   <td> <input type="text" name="" id="Endocrine" placeholder="Endocrine"></td>     
+  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">muscluskeletal:</td>
+   <td> <input type="text" name="" id="muscluskeletal" placeholder="muscluskeletal"></td>     
+  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td><div class="row">General:</td>
+   <td> <input type="text" name="" id="General" placeholder="General"></td>     
+  </td>     
+    </tr>
+
+
+
+
+
+
+
+
+         </tbody>
+      </table>
+       </div>
+       
+        <!-- row============================= -->
+  </div>
+</div>
+<!-- Psychological  -->
+
+<div class="psychology" style="padding: 10px;">
+  <div class="psychology_icon">
+    <h2 class="patient">Psychological</h2>
+    <i class="fa-solid fa-heart" onclick="show_psych()"></i></div>
+  <div class="psychology_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>family</td>
+           <td>subfamily</td>
+          
+           <td>comments</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+        <h2>Psychology:</h2>
+      </td>
+      <td>stress?  </td>
+   <td>  <select name="" id="stress"> <option value="no">no</option> <option value="yes">yes</option></select> </div></td>     
+    </tr>
+
+    <tr>
+      <td>
+        
+      </td>
+      <td>Anxious? </td>
+   <td><select name="" id="Anxious"> <option value="no">no</option> <option value="yes">yes</option></select> </div>  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>Depressed?</td>
+   
+        <td><select name="" id="Depressed"><option value="no">no</option> <option value="yes">yes</option></select> </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>Angery?</td>
+   <td> <select name="" id="Angery"><option value="no">no</option> <option value="yes">yes</option></select> </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>Others? </td>
+   <td> <input type="text" name="" id="Others_psych_comment" placeholder="comment"></td>     
+    </tr>
+         </tbody>
+      </table>
+     
+</div>
+        <!-- row============================= -->
+  
+</div>
+</div>
+
+<!-- econamical============================== -->
+<div class="economical" style="padding: 10px;">
+  <div class="economical_icon">
+    <h2 class="patient">Economical_state</h2>
+    <i class="fa-solid fa-money-bill-1-wave" onclick="show_eco()"></i></div>
+  <div class="economical_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>family</td>
+           <td>subfamily</td>
+          
+           <td>comments</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+        <h2>economical_state:</h2>
+      </td>
+      <td>cash and able to pay?  </td>
+   <td> <select name="" id="cash_able"><option value="no">no</option> <option value="yes">yes</option></select></td>     
+    </tr>
+
+    <tr>
+      <td>
+        
+      </td>
+      <td>cash an unable to pay? </td>
+   <td><select name="" id="cash_unable"><option value="no">no</option> <option value="yes">yes</option></select>  </td>     
+    </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>Insurance? </td>
+   <td><select name="" id="Insurance"><option value="no">no</option> <option value="yes">yes</option></select>  </td>     
+    </tr>
+         </tbody>
+      </table>
+     
+</div>
+  </div>
+</div>    <!-- row============================= -->
+  
+
+
+<!-- ==================vital_signs========== -->
+
+<div class="vital_signs" style="padding: 10px;">
+  <div class="vital_signs_icon">
+    <h2 class="patient">vital signs</h2>
+    <i class="fa-solid fa-stethoscope" onclick="show_vit()"></i></div>
+  <div class="vital_signs_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>Prametars</td>
+           <td>Values</td>
+          
+           <td>date</td>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+        <h3>Temprature:</h3>
+      </td>
+      <td><div class="row"> <input placeholder="Temprature1" type="text" id="Temprature1">
+        <input placeholder="Temprature2" type="text" id="Temprature2">
+        <input placeholder="Temprature3" type="text" id="Temprature3">
+        <input placeholder="Temprature4" type="text" id="Temprature4">
+      </div> </td>
+   <td> </td>     
+    </tr>
+
+    <tr>
+      <td>
+        <h3>blood_Pressure:</h3>
+      </td>
+      <td><div class="row">
+        <input placeholder="blood_Pressure1" type="text" id="blood_Pressure1">
+        <input placeholder="blood_Pressure2" type="text" id="blood_Pressure2">
+        <input placeholder="blood_Pressure3" type="text" id="blood_Pressure3">
+        <input placeholder="blood_Pressure4" type="text" id="blood_Pressure4">
+      </div> </td>
+   <td> </td>     
+    </tr>
+    <tr>
+      <td>
+        <h3>Respiration:</h3>
+      </td>
+      <td><div class="row">
+        <input placeholder="Respiration1" type="text" id="Respiration1">
+        <input placeholder="Respiration2" type="text" id="Respiration2">
+        <input placeholder="Respiration3" type="text" id="Respiration3">
+        <input placeholder="Respiration4" type="text" id="Respiration4">
+      </td>
+   <td></td>     
+    </tr>
+    <tr>
+      <td>
+        <h3>Pulse:</h3>
+      </td>
+      <td><div class="row">
+        <input placeholder="Pulse1" type="text" id="Pulse1">
+        <input placeholder="Pulse2" type="text" id="Pulse2">
+        <input placeholder="Pulse3" type="text" id="Pulse3">
+        <input placeholder="Pulse4" type="text" id="Pulse4">
+      </td>
+   <td></td>     
+    </tr>
+    <tr>
+      <td>
+        <h3>Pain_scale:</h3>
+      </td>
+      <td><div class="row">
+        <input placeholder="Pain_scale1" type="text" id="Pain_scale1">
+        <input placeholder="Pain_scale2" type="text" id="Pain_scale2">
+        <input placeholder="Pain_scale3" type="text" id="Pain_scale3">
+        <input placeholder="Pain_scale4" type="text" id="Pain_scale4"></td>
+   <td> </td>     
+    </tr>
+  
+         </tbody>
+      </table>
+       </div>
+       
+        <!-- row============================= -->
+  </div>
+</div>
+
+<!-- medication -->
+<div class="medication" style="padding: 10px;">
+  <div class="medication_icon">
+    <h2 class="patient">medication</h2>
+    <i class="fa-solid fa-pills" onclick="show_med()"></i></div>
+  <div class="medication_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>medication</td>
+           
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+       <div class="row"> <input type="text" placeholder=" name/frq" id="medication1">
+        <input type="text" placeholder=" name/frq" id="medication2">
+      </div></td></tr>
+   <tr>  <td>
+        <div class="row"> <input type="text" placeholder=" name/frq" id="medication3">
+         <input type="text" placeholder=" name/frq" id="medication4">
+       </div></td></tr> 
+      <tr> <td>
+        <div class="row"> <input type="text" placeholder=" name/frq" id="medication5">
+         <input type="text" placeholder=" name/frq" id="medication6">
+       </div></td></tr>
+    </tr>
+
+   
+   
+         </tbody>
+      </table>
+     
+    </div>
+        <!-- row============================= -->
+  
+</div>
+</div>
+<!-- ============care cheate  =========-->
+
+<div class="care_cheate" style="padding: 10px;">
+  <div class="care_cheate_icon">
+    <h2 class="patient">care_cheate</h2>
+    <i class="fa-solid fa-hospital-user" onclick="show_care()"></i></div>
+  <div class="care_cheate_body">
+    <div class="row">
+      <table>
+       <thead>
+         <tr>
+           <td>Care</td>
+           
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+      <td>
+       <div class="row"> <input type="text" placeholder=" Care/time" id="care1">
+        <input type="text" placeholder=" Care/time" id="care2">
+      </div></td></tr>
+   <tr>  <td>
+        <div class="row"> <input type="text" placeholder=" Care/time" id="care3">
+         <input type="text" placeholder=" Care/time" id="care4">
+       </div></td></tr> 
+      <tr> <td>
+        <div class="row"> <input type="text" placeholder=" Care/time" id="care5">
+         <input type="text" placeholder=" Care/time" id="care6">
+       </div></td></tr>
+    </tr>
+
+   
+   
+         </tbody>
+      </table>
+     
+    </div>
+        <!-- row============================= -->
+  
+</div>
+</div>
+
+<div class="kardex" style="padding: 10px;">
+<div class="kardex_icon">
+  <h2 class="patient">Make Kardex</h2>
+  <i class="fa-solid fa-id-card-clip" onclick="show_kardex()"></i></div>
+<div class="kardex_body">
+  <!-- row============================= -->
+  <div class="row">
+<h3>date_of_admission:</h3> <input type="date" id="date_of_admission">
+
+<h3>age:</h3> <input type="number" id="age">
+<h3>sex:</h3> <select name="" id="sex" style="width: 100%; padding: 7px;border-radius: 5px;
+font-size: large;
+">
+  <option value="male">male</option>
+  <option value="female">female</option>
+</select>
+</div>
+ <!-- row============================= -->
+ <div class="row">
+  <h3>date_of_operation:</h3> <input type="date" id="date_of_operation">
+  
+  <h3>occupation:</h3> <input type="text" id="occupation">
+ 
+  </div>
+   <!-- row============================= -->
+   <div class="row">
+    <h3>Diagnosis:</h3> <input type="text" id="Diagnosis2">
+    
+    <h3>treating_doctor:</h3> <input type="text" id="treating_doctor">
+   
+    </div>
+     <!-- row============================= -->
+     <div class="row">
+      <h3>V/S:</h3> <small>T:</small><input type="text" id="temp"><small style="background-color:#836FFF;">C*</small>
+     <small>B/P:</small><input type="text" id="bp"><small style="background-color:#836FFF;">mm/Hg</small>
+  <small>P:</small><input type="text" id="pulse"><small style="background-color:#836FFF;">b/min</small>
+ <small>R:</small><input type="text" id="resp"><small style="background-color:#836FFF;">c/min</small>
+      
+
+      <h3>Wt:</h3> <input type="number" id="Wt1"> <small>Kg</small>
+     
+      </div>
+       <!-- row============================= -->
+       <div class="row">
+        <h3>Diet:</h3> <input type="text" id="Diet">
+        
+        <h3>Path:</h3> <input type="text" id="Path">
+       
+        </div>
+         <!-- row============================= -->
+         <div class="row">
+          <h3>Fluid:</h3> <input type="text" id="Fluid">
+          
+          <h3 style="color: crimson;">Allergy:</h3> <input type="text" id="Allergy" style="background-color: rgba(240, 88, 118, 0.966);">
+         
+          </div>
+           <!-- row============================= -->
+           <div class="row">
+            <h3>Elimination:</h3> <small>Urine</small> <input type="text" id="Urine">
+            <small>Stool</small> <input type="text" id="Stool">
+            <small>Wt</small> <input type="text" id="wt_elim">
+           
+            </div>
+             <!-- row============================= -->
+             <h3>Spicial Information:</h3><textarea id="info"   style="width: 100%;border-radius: 7px;padding: 7px;"></textarea>
+<!-- ===================== -->
+<div class="row">
+  <h3>hospital_No:</h3> <input type="number" id="hospital_no">
+  
+  <h3>room_No:</h3> <input type="number" id="room_No">
+  <h3>Bed_No:</h3> <input type="number" id="Bed_No">
+  </div>
+
+   <!-- row============================= -->
+  
+    
+     <!-- row============================= -->
+   <div class="row">
+    <h3>Signiture/</h3> <input type="text" id="Signiture" placeholder="your name">
+    
+    </div>
+ 
+     <!-- row============================= -->
+
+
+</div>
+
+
+
+
+
+</div>
+
+ <input type="submit" value="Save" id="save" >
+</div>
+
+</div>
+<!-- ============================display patient data================================================= -->
+
+<div class="display_data" id="display_data1" style="display: none; border: solid 1px #211951; padding: 7px;margin: 7px;border-radius: 7px;">
+
+
+
+<!-- ///////////////////////////////// -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="table">
+    <div class="row" style="display: flex; justify-content: center;">
+    <h3 style="text-align: center; color:white; background-color:#211951 ; display: inline-block; border-radius: 5px; padding: 5px;"> <i class="fa-solid fa-hospital-user"></i>My Patients</h3>
+<label for="Search"> <i class="fa-solid fa-search"></i></label>
+<input  
+style="margin-left: 10px; background: #826fffb9; width: 50%;"
+type="search" onkeyup="search_patient(this.value)" placeholder="Search patient" id="Search">
+  </div><table>
+<thead>
+  <tr>
+    <td>#</td>
+    <td>Patient Name</td>
+    <td>MRN</td>
+    <td>Adress</td>
+    <td>Phone</td>
+    <td>Diagnosis</td>
+    <td>Details</td>
+  </tr>
+</thead>
+<tbody id="tbody1">
+  
+</tbody>
+
+</table>
+</div>
+
+
+
+<footer>
+<div>
+  <h3>Developed by : <h2 style="color: #15F5BA;">Mohammed Sobhi</h2></h3>
+</div>
+<div class="social">
+  <h3>Contacts:</h3>
+  <div class="social_icon">
+<a href="https://www.facebook.com/profile.php?id=100010150261486"><i class="fa-brands fa-facebook"></i></a>
+<a href=""><i class="fa-brands fa-whatsapp"></i></a>
+<a href=""><i class="fa-brands fa-telegram"></i></a>
+<a href="https://www.linkedin.com/in/mohammed-sobhi-gouda-a62284271?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqrBU2kZ7TZ2LFIIpYxmGTg%3D%3D"><i class="fa-brands fa-linkedin"></i></a></div>
+</div>
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> 
+
+
+
+<script src="main.js"></script>
+</body>
+</html>   
